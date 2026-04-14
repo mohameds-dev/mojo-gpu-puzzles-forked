@@ -10,12 +10,14 @@ comptime THREADS_PER_BLOCK = SIZE
 comptime dtype = DType.float32
 
 
+# SOLVED: use `pixi run mojo problems/p01/p01.mojo` to run it
+
 def add_10(
     output: UnsafePointer[Scalar[dtype], MutAnyOrigin],
     a: UnsafePointer[Scalar[dtype], MutAnyOrigin],
 ):
     var i = thread_idx.x
-    # FILL ME IN (roughly 1 line)
+    output[i] = a[i] + 10
 
 
 # ANCHOR_END: add_10
