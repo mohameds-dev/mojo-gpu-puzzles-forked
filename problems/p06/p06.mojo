@@ -16,7 +16,7 @@ def add_10_blocks(
     size: Int,
 ):
     var i = block_dim.x * block_idx.x + thread_idx.x
-    # FILL ME IN (roughly 2 lines)
+    output[i] = a[i] + 10
 
 
 # ANCHOR_END: add_10_blocks
